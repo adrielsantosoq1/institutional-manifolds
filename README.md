@@ -9,6 +9,11 @@ Repository for the paper **"The Geometry of Governance: A Topological Perspectiv
 
 While comparative political science often relies on discrete regime typologies, this project explores the utility of modeling state architecture as a continuous, low-dimensional manifold. Using cross-national data and manifold learning techniques (PCA and UMAP), this repository maps governance coordinates via institutional **Magnitude** (mean capacity) and **Imbalance** (structural skew) across a triad of Order, Liberty, and Equality.
 
+## Visualizing the Manifold
+
+![PCA Projection](figures/fig1_pca_manifold.png)
+*Figure 1: The continuous manifold of state governance, showing how regime architectures blend across a geometric spectrum.*
+
 ### Key Findings
 * **The Continuous Manifold:** Nation-states do not form discrete clusters; they exist on a continuous geometric spectrum.
 * **The Funnel of State Capacity:** Achieving the highest tiers of state capacity strictly requires dimensional balance.
@@ -54,10 +59,14 @@ To run this analysis, you will need the **World Values Survey (WVS) Wave 7** dat
    \`\`\`
 
 4. **Run the analysis:**
-   \`\`\`bash
-   python src/analysis.py
-   \`\`\`
-   *This script will impute missing data, calculate the Institutional Triad, perform the PCA/UMAP projections, run the OLS regressions, and save all figures to the `figures/` directory.*
+   Open `src/analysis.ipynb` using your preferred notebook environment (e.g., VS Code, Cursor, JupyterLab, or Google Colab). Running the cells sequentially will impute missing data, calculate the Institutional Triad, perform the PCA/UMAP projections, run the OLS regressions, and save all figures directly to the `figures/` directory.
+
+## Writing & Manuscript
+
+The manuscript is located in the `paper/` directory. 
+* To compile the PDF locally, ensure you have a LaTeX distribution (like TeX Live) installed.
+* Open `paper/main.tex` in your editor and compile using `latexmk` or the LaTeX Workshop extension.
+* Note: Figures are pulled from the `figures/` directory.
 
 ## Author
 

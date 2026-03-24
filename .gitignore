@@ -211,26 +211,21 @@ __marimo__/
 # CUSTOM PROJECT FILES: DATA & LATEX
 # ==========================================
 
-# 1. Data Files (CRUCIAL: Blocks the copyrighted WVS .csv file)
+# 1. Data Files (Blocks copyrighted/large datasets)
 data/*.csv
 data/*.dta
-data/*.rds
-data/*.xlsx
 !data/.keep 
 
-# 2. Generated Figures (Keeps the folder but ignores the auto-generated plots)
-# figures/*.png
-# figures/*.eps
-# figures/*.pdf
-!figures/.keep
-
-# 3. LaTeX Compilation Junk (Keep the .tex, ignore the messy build files)
+# 2. LaTeX Compilation Junk (The "Noise")
 paper/*.aux
-paper/*.bbl
-paper/*.blg
-paper/*.fls
 paper/*.log
 paper/*.out
 paper/*.toc
 paper/*.fdb_latexmk
 paper/*.synctex.gz
+paper/*.fls
+paper/*-eps-converted-to.pdf
+
+# 3. The Final Manuscript (The "Artifact")
+paper/*.pdf
+paper/main.pdf
